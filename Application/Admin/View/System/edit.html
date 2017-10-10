@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>修改数据</title>
+</head>
+<body>
+	<form action="__SELF__" method="post">
+	<input type="hidden" name="id" value="{$info['id']}" />
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text" name="username" value="{$info['username']}" /></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="password" value="XXXX" /></td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td><input type="password" name="cpassword" value="XXXX"/></td>
+		</tr>
+		<tr>
+			<td>角色：</td>
+			<td>
+				<select name='role_id'>
+	                <volist name='role' id='v'>
+	                    <if condition="$v['role_id'] eq $info['role_id']">
+	                        <option value="{$v['role_id']}" selected="selected">{$v['role_name']}</option>
+	                    <else />
+	                        <option value="{$v['role_id']}">{$v['role_name']}</option>
+	                    </if>
+	                </volist>
+	            </select>
+			</td>
+		</tr>
+		<tr>
+	        <td colspan="99" align="center">
+	            <input type="submit" class="button" value=" 确定 " />
+	            <input type="reset" class="button" value=" 重置 " />
+	        </td>
+	    </tr>
+	</table>
+	</form>
+</body>
+</html>

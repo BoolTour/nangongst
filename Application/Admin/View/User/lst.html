@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>学号</th>
+            <th>邮箱</th>
+			<th width="120">操作</th>
+        </tr>
+		<volist name="info" id="v">            
+		<tr>
+			<td>{$v['username']}</td>
+			<td>XXXXX</td>
+			<td>{$v['sno']}</td>
+			<td>{$v['email']}</td>
+	        <td align="center">
+	        	<a href="__CONTROLLER__/edit/id/{$v['id']}">编辑</a>
+                <a href="__CONTROLLER__/del/id/{$v['id']}" onclick="return confirm('确定要删除吗？')">|删除</a>
+	        </td>
+        </tr>
+        </volist>
+        <tr>
+        	<td colspan="2" style="text-align:right;">
+        		{$page}
+        	</td>
+        </tr> 
+	</table>
+</body>
+</html>
+<script>
+	$("#start_time").datepicker({ dateFormat: "yy-mm-dd" });
+	$("#end_time").datepicker({ dateFormat: "yy-mm-dd" });
+</script>

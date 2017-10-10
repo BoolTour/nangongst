@@ -1,0 +1,6 @@
+[ 2017-07-21T19:14:02+08:00 ] ::1 /Project/nyist/
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-21T19:21:17+08:00 ] ::1 /Project/nyist/
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+

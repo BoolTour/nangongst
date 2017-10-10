@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>修改数据</title>
+</head>
+<body>
+	<form action="__SELF__" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="{$info['id']}" />
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text" name="username" value="{$info['username']}" /></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="password" value="XXXXX" /></td>
+		</tr>
+		<tr>
+			<td>学号：</td>
+			<td><input type="text" name="sno" value="{$info['sno']}" /></td>
+		</tr>
+		<tr>
+			<td>邮箱：</td>
+			<td><input type="text" name="email" value="{$info['email']}" /></td>
+		</tr>
+		<tr>
+	        <td colspan="99" align="center">
+	            <input type="submit" class="button" value=" 确定 " />
+	            <input type="reset" class="button" value=" 重置 " />
+	        </td>
+	    </tr>
+	</table>
+	</form>
+</body>
+</html>

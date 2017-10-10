@@ -1,0 +1,6 @@
+[ 2017-09-07T11:00:17+08:00 ] 127.0.0.1 /index.php/Home/User/register
+ERR: Think\Controller:execute方法不存在！
+
+[ 2017-09-07T11:01:11+08:00 ] 127.0.0.1 /index.php/Home/User/register
+ERR: Think\Controller:execute方法不存在！
+

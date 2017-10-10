@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>管理员列表</title>
+</head>
+<body>
+	<span style="float: right; margin-right: 8px; font-weight: bold;">
+	    <a style="text-decoration: none;" href="__CONTROLLER__/add">【添加管理员】</a>
+	</span>
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >账号</th>
+			<th width="120">操作</th>
+        </tr>
+		<volist name="info" id="v">            
+		<tr>
+			<td>{$v['username']}</td>
+	        <td align="center">
+	        	<a href="__CONTROLLER__/edit/id/{$v['id']}">编辑</a>
+	        	<if condition="$v['id'] gt 1">
+                	<a href="__CONTROLLER__/del/id/{$v['id']}" onclick="return confirm('确定要删除吗？')">|删除</a>
+                </if>
+	        </td>
+        </tr>
+        </volist>
+        <tr>
+        	<td colspan="2" style="text-align:right;">
+        		{$page}
+        	</td>
+        </tr> 
+	</table>
+</body>
+</html>

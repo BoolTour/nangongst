@@ -1,0 +1,39 @@
+<div class="main">
+	<div class="left">
+		<div class="menu1">
+			<h2><img src="{$Think.const.IMG_URL}channel_1.gif" /></h2>
+			<ul>
+				<li><a href="__CONTROLLER__/index" title="项目列表" id="pro1">项目列表</a></li>
+				<li><a href="__CONTROLLER__/add" title="申报项目" id="pro2">申报项目</a></li>
+				<li><a href="__CONTROLLER__/lst" title="我的项目" id="pro3">我的项目</a></li>
+                <li><a href="__CONTROLLER__/member" title="项目组成员" id="pro4">项目组成员</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团项目</a></div>
+		<div class="positioninfo">社团项目列表</div>
+		<div class="mainarea">
+            <table width="100%" border="0" cellspacing="1" cellpadding="3" class="message_add" >
+                <tr bgcolor="#FFFFFF">
+                    <td align="right">负责人邮箱：</td>
+                    <td colspan="3" align="left">
+                        <input type="email" name="pro_email" id="pro_email" value="{$info['pro_email']}" />&nbsp;
+                    </td>
+                </tr> 
+                <tr bgcolor="#FFFFFF">
+                    <td align="right">项目需求：</td>
+                    <td colspan="3" align="left">
+                        <textarea name="pro_remark" cols="60" rows="8">{$info['pro_remark']}</textarea>&nbsp;
+                    </td>
+                </tr> 
+                <tr bgcolor="#FFFFFF">
+                    <td align="right">项目描述：</td>
+                    <td colspan="3" align="left">
+                        <textarea name="pro_desc" cols="60" rows="8">{$info['pro_desc']}</textarea>&nbsp;
+                    </td>
+                </tr>
+            </table>
+		</div>
+	</div>
+</div>

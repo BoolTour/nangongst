@@ -1,0 +1,27 @@
+[ 2017-08-09T15:15:17+08:00 ] ::1 /Project/nyist/index.php/Home/User/localhost/Project/nyist/Home/User/check/name/%E8%AF%B7%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D
+ERR: 非法操作:localhost
+
+[ 2017-08-09T15:15:17+08:00 ] ::1 /Project/nyist/index.php/Home/User/localhost/Project/nyist/Home/User/check/name/%E8%AF%B7%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D
+ERR: 非法操作:localhost
+
+[ 2017-08-09T15:15:41+08:00 ] ::1 /Project/nyist/index.php/Home/User/Project/nyist/Home/User/check/name/%E8%AF%B7%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D
+ERR: 非法操作:Project
+
+[ 2017-08-09T15:15:41+08:00 ] ::1 /Project/nyist/index.php/Home/User/Project/nyist/Home/User/check/name/%E8%AF%B7%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D
+ERR: 非法操作:Project
+
+[ 2017-08-09T15:42:48+08:00 ] ::1 /Project/nyist/index.php/Home/User/check.html
+ERR: 参数错误或者未定义:name
+
+[ 2017-08-09T15:42:48+08:00 ] ::1 /Project/nyist/index.php/Home/User/check.html
+ERR: 参数错误或者未定义:name
+
+[ 2017-08-09T15:44:54+08:00 ] ::1 /Project/nyist/index.php/Home/User/undefined
+ERR: 非法操作:undefined
+
+[ 2017-08-09T15:44:54+08:00 ] ::1 /Project/nyist/index.php/Home/User/undefined
+ERR: 非法操作:undefined
+
+[ 2017-08-09T18:17:07+08:00 ] ::1 /Project/nyist/index.php/Home/User/
+ERR: 非法操作:index
+

@@ -1,0 +1,48 @@
+<div class="main">
+	<div class="left">
+		<div class="menu1">
+			<h2><img src="{$Think.const.IMG_URL}channel_2.gif" /></h2>
+			<ul>
+                <volist name="rank" id="v">
+				<li><a href="__CONTROLLER__/index/id/{$v['id']}" title="{$v['class']}">{$v["class"]}成员</a></li>
+                </volist>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团项目</a></div>
+		<div class="positioninfo">社团成员列表</div>
+		<div class="mainarea">
+			<table width="100%" border="0" cellspacing="1" cellpadding="3">
+				<tbody>
+                	<tr style="font-weight: bold;">
+                        <td>编号</td><td>姓名</td><td>学号</td><td>性别</td>
+                        <td>年级</td><td>专业</td><td>联系方式</td><td>所在公司</td>
+                        <td>操作</td>
+                    </tr>
+                    <volist name="info" id="v">
+                    <tr id="project">
+                        <td>{$i}</td>
+                        <td>{$v['name']}</td>
+                        <td>{$v['sno']}</td>
+                        <td>{$v['sex']}</td>
+                        <td>{$v['class']}</td>
+                        <td>{$v['direct']}</td>
+                        <td>{$v['mobile']}</td>
+                        <td>{$v['company']}</td>
+                        <td><a href="__CONTROLLER__/more/id/{$v['id']}" target="_blabk"> 
+                            <img src="{$Think.const.IMG_URL}view.gif" />
+                        </td>
+                    </tr>
+                    </volist>
+                    <tr>
+                        <td colspan="20" style="text-align: right;">
+                            {$page}
+                        </td>
+                    </tr>
+                </tbody>
+			</table>
+		<div class="backtop"><a href="#"><img src="{$Think.const.IMG_URL}top.gif" alt="回顶部" /></a></div>
+		</div>
+	</div>
+</div>

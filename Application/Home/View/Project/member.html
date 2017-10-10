@@ -1,0 +1,48 @@
+<div class="main">
+	<div class="left">
+		<div class="menu1">
+			<h2><img src="{$Think.const.IMG_URL}channel_1.gif" /></h2>
+			<ul>
+				<li><a href="__CONTROLLER__/index" title="项目列表" id="pro1">项目列表</a></li>
+				<li><a href="__CONTROLLER__/add" title="申报项目" id="pro2">申报项目</a></li>
+				<li><a href="__CONTROLLER__/lst" title="我的项目" id="pro3">我的项目</a></li>
+                <li><a href="__CONTROLLER__/member" title="项目组成员" id="pro4">项目组成员</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团项目</a></div>
+		<div style="background-color: #ccc;">
+            <form action="__SELF__" method="GET">
+                <input type="hidden" name="p" value="1" />
+                <img src="{$Think.const.ADMIN_IMG_URL}icon_search.gif" width="26" height="22" border="0" alt="SEARCH">
+                <input type="text" name="pro_id" size="15" placeholder="项目编号" value="<?php echo I('get.pro_id'); ?>"/>
+                <input type="submit" value="搜索" class="button" />
+            </form>   
+        </div>
+		<div class="mainarea">
+			<table width="100%" border="0" cellspacing="1" cellpadding="3">
+				<tbody>
+                	<tr style="font-weight: bold;">
+                        <td>编号</td><td>项目编号</td><td>项目成员</td>
+                        <td>电子邮箱</td>
+                    </tr>
+                    <volist name="info" id="v">
+                    <tr id="project">
+                        <td>{$i}</td>
+                        <td>{$v['pro_id']}</td>
+                        <td>{$v['name']}</td>
+                        <td>{$v['email']}</td>
+                    </tr>
+                    </volist>
+                    <tr>
+                        <td colspan="20" style="text-align: right;">
+                            {$page}
+                        </td>
+                    </tr>
+                </tbody>
+			</table>
+		<div class="backtop"><a href="#"><img src="{$Think.const.IMG_URL}top.gif" alt="回顶部" /></a></div>
+		</div>
+	</div>
+</div>

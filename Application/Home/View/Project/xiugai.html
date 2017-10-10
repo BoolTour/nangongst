@@ -1,0 +1,97 @@
+    <link href="{$Think.const.TIME_URL}jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="{$Think.const.TIME_URL}jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{$Think.const.TIME_URL}jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{$Think.const.TIME_URL}datepicker_zh-cn.js"></script>
+<div class="main">
+	<div class="left">
+		<div class="menu1">
+			<h2><img src="{$Think.const.IMG_URL}channel_1.gif" /></h2>
+			<ul>
+				<li><a href="__CONTROLLER__/index" title="项目列表" id="pro1">项目列表</a></li>
+				<li><a href="__CONTROLLER__/add" title="申报项目" id="pro2">申报项目</a></li>
+				<li><a href="__CONTROLLER__/lst" title="我的项目" id="pro3">我的项目</a></li>
+                <li><a href="__CONTROLLER__/member" title="项目组成员" id="pro4">项目组成员</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团项目</a></div>
+		<div class="positioninfo">申报项目</div>
+		<div class="mainarea">
+			<form action="__SELF__" method="post" name="form1">
+                <table width="100%" border="0" cellspacing="1" cellpadding="3" class="message_add" >
+                    <tr bgcolor="#FFFFFF">
+                        <td width="80" align="right">项目名称：</td>
+                        <td align="left">
+                            <input type="text" name="pro_name" value="{$info['pro_name']}" />&nbsp;<font class="red">*</font>
+                        </td>
+                        <td align="right">项目负责人：</td>
+                        <td align="left">
+                           <input type="text" name="pro_people" value="{$info['pro_people']}"  />&nbsp;<font class="red">*</font>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">开始时间：</td>
+                        <td align="left">
+                            <input type="text" name="pro_starttime" id="pro_starttime" value="{$info['pro_starttime']}" />&nbsp;
+                        </td>
+                        <td align="right">结束时间：</td>
+                        <td align="left">
+                            <input type="text" name="pro_endtime" id="pro_endtime" value="{$info['pro_endtime']}" />&nbsp;
+                        </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">负责人邮箱：</td>
+                        <td colspan="3" align="left">
+                            <input type="email" name="pro_email" id="pro_email" value="{$info['pro_email']}" />&nbsp;<font class="red">*</font>
+                        </td>
+                    </tr> 
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">项目进度：</td>
+                        <td colspan="3" align="left">
+                            <input type="text" name="pro_plan" id="pro_plan" value="{$info['pro_plan']}" />&nbsp;<font class="red">请填写整数</font>
+                        </td>
+                    </tr> 
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">项目描述：</td>
+                        <td colspan="3" align="left">
+                            <textarea name="pro_desc" cols="60" rows="10">{$info['pro_desc']}</textarea>&nbsp;<font class="red">*</font>
+                        </td>
+                    </tr>
+                    <tr align="center" bgcolor="#FFFFFF">
+                        <td height="30" colspan="4">
+                          <input type="submit" value="   提   交   " />&nbsp;&nbsp;
+                          <input type="reset" value="   重   置   " />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+		</div>
+	</div>
+</div>
+<script>
+    $("#pro_starttime").datepicker({ dateFormat: "yy-mm-dd" });
+    $("#pro_endtime").datepicker({ dateFormat: "yy-mm-dd" });
+</script>
+<script type="text/javascript" src="{$Think.const.JS_URL}jquery.min.js"></script>
+<script type="text/javascript">
+    $("form[name=form1]").submit(function(){
+        //使用ajax来提交
+        $.ajax({
+            type:"POST",
+            url:"__SELF__",
+            data:$(this).serialize(),  //收集表单数据
+            dataType:"json",      //标记服务器返回的是json数据
+            success:function(data){
+                //data是从服务器返回的数据
+                if(data.status==1){
+                    alert(data.info);
+                    location.href=data.url;
+                }else{
+                    alert(data.info);
+                }
+            }
+        });
+        return false;
+    })
+</script>

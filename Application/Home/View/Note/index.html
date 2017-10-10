@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{$Think.const.CSS_URL}main.css">
+<script src="{$Think.const.JS_URL}display.js"></script>
+
+
+<div id="note_body">
+		<div class="Li_pic">
+			<img src="{$Think.const.IMG_URL}liuyan.gif" width="100px" height="80px">
+			<img src="{$Think.const.IMG_URL}pic_mes.png" alt="">
+		</div>
+		<div id="message_box">
+			<p id="pp1">留言({$count})</p>
+             	<ul>
+             	<volist name="info" id="v">
+                	<li><img src="{$Think.const.IMG_URL}member.gif" style="vertical-align:middle;">
+                    	{$v['user']}:留言于{$v[date]}</li>
+                	<li><span>{$v['text']}</span></li>            
+                </volist>
+                	<li style="text-align:right; font-size:12px;">{$page}</li> 
+               	</ul>
+		</div>
+        <form action="__CONTROLLER__/tianjia" method="post">
+		<div id="mybtn">
+			<input type="button" id="btn1"value="我也要留言">
+			<div id ="input_word">
+				<textarea name="text" id="text" cols="50" rows="5"></textarea><br>
+				<input type="submit" id="btn2" value="确定">
+				<input type="reset" id="btn3" value="重置">
+			</div>
+		</div>
+        </form>
+</div>

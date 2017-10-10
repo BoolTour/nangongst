@@ -1,0 +1,46 @@
+<div class="main">
+    <div class="left">
+        <div class="menu2">
+            <h2><img src="{$Think.const.IMG_URL}channel_3.gif" /></h2>
+            <div class="menu_left">
+            <div class="menu_left_child">   
+                <div class="list">
+                    <volist name="link" id="vv">
+                    <a href="{$vv['addr']}" target="_blank"><img src="{$Think.const.IMG_URL}list.gif">{$vv['name']}</a>
+                    <hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+                    </volist>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团资源</a></div>
+        <div class="positioninfo">社团资源列表</div>
+        <div class="mainarea">
+            <table width="80%" border="0" cellspacing="1" cellpadding="3">
+                <tbody>
+                    <tr style="font-weight: bold;">
+                        <td>编号</td><td>资源名称</td><td>上传者</td><td>上传日期</td>
+                        <td>操作</td>
+                    </tr>
+                    <volist name="info" id="v">
+                    <tr id="project">
+                        <td>{$i}</td>
+                        <td>{$v['filename']}</td>
+                        <td>{$v['fileuploader']}</td>
+                        <td>{$v['filedate']}</td>
+                        <td><a style="font-family:楷体; font-weight:bold; color:#000; font-size:14px;" href="__CONTROLLER__/download/id/{$v['id']}">下载</td>
+                    </tr>
+                    </volist>
+                    <tr>
+                        <td colspan="20" style="text-align: right;">
+                            {$page}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        <div class="backtop"><a href="#"><img src="{$Think.const.IMG_URL}top.gif" alt="回顶部" /></a></div>
+        </div>
+    </div>
+</div>

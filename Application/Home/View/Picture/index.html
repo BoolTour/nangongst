@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{$Think.const.CSS_URL}main.css">
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}photo.css">
+<script type="text/javascript" src="{$Think.const.JS_URL}move.js"></script>
+<script type="text/javascript" src="{$Think.const.JS_URL}tuozhuai.js"></script>
+
+<div id="body" style="background-color:#CCC;">
+	<div class="drag_div" id="drag_div">
+	<volist name="info" id="v">
+	<div class="k{$i}">
+		<p class="img_100 margin_bottom_15"><img src="{$Think.const.SITE_URL}Application/Public/Uploads/{$v['file_big_pic']}"/></p><p class="text_center">{$v['filedesc']}</p>	
+	</div>
+	</volist>
+</div>
+</div>

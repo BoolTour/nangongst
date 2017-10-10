@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>修改数据</title>
+</head>
+<body>
+	<form action="__SELF__" method="post">
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text" name="username" /></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="password" /></td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td><input type="password" name="cpassword" /></td>
+		</tr>
+		<tr>
+			<td>角色：</td>
+			<td>
+				<select name="role_id"> 
+				<option value='0'>-请选择-</option>
+				<volist name="role" id="v">        
+                	<option value="{$v['role_id']}">{$v['role_name']}</option>
+	            </volist>
+	            </select>
+			</td>
+		</tr>
+		<tr>
+	        <td colspan="99" align="center">
+	            <input type="submit" class="button" value=" 确定 " />
+	            <input type="reset" class="button" value=" 重置 " />
+	        </td>
+	    </tr>
+	</table>
+	</form>
+</body>
+</html>

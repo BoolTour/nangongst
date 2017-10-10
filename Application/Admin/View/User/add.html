@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>修改数据</title>
+	<link href="{$Think.const.TIME_URL}jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" language="javascript" src="{$Think.const.TIME_URL}jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="{$Think.const.TIME_URL}jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="{$Think.const.TIME_URL}datepicker_zh-cn.js"></script>
+	<script type="text/javascript" charset="utf-8" src="{$Think.const.EDIT_URL}ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="{$Think.const.EDIT_URL}ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="{$Think.const.EDIT_URL}lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+	<form action="__SELF__" method="post" enctype="multipart/form-data">
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text" name="username" /></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="password" /></td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td><input type="password" name="cpassword" /></td>
+		</tr>
+		<tr>
+			<td>开始时间：</td>
+			<td><input type="text" name="start_time" id="start_time" /></td>
+		</tr>
+		<tr>
+			<td>结束时间：</td>
+			<td><input type="text" name="end_time" id="end_time" /></td>
+		</tr>
+		<tr>
+			<td>图片：</td>
+			<td align="left"><input type="file" name="user_pic" /></td>
+		</tr>
+		<tr>
+			<td>描述</td>
+			<td>
+				<textarea name="user_desc" id="user_desc"></textarea>
+			</td>
+		</tr>
+		<tr>
+	        <td colspan="99" align="center">
+	            <input type="submit" class="button" value=" 确定 " />
+	            <input type="reset" class="button" value=" 重置 " />
+	        </td>
+	    </tr>
+	</table>
+	</form>
+</body>
+</html>
+<script>
+	$("#start_time").datepicker({ dateFormat: "yy-mm-dd" });
+	$("#end_time").datepicker({ dateFormat: "yy-mm-dd" });
+
+	UE.getEditor('user_desc', {
+	"initialFrameWidth" : "40%",     //宽
+	"initialFrameHeight" : 200,     //高
+	"maximumWords" : 3000,       //可以输入的字符数
+ 	//"toolbars" : btn_basic
+	});
+</script>

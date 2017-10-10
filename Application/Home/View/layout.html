@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>南工社团</title>
+    <link href="{$Think.const.CSS_URL}style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="index_body">
+        <div class="block clearfix" style="position: relative; height: 98px;">
+            <a href="#" name="top"><img class="logo"src="{$Think.const.IMG_URL}logo.jpg" style="margin-left:40px;"></a>
+            <div id="topNav" class="clearfix">
+                <div style="float: left;"> 
+                    <font id="ECS_MEMBERZONE">
+                        <div id="append_parent"></div>
+                        欢迎来到南工社团&nbsp;
+                        <if condition='$Think.session.user_name neq ""'>
+                            {$Think.session.user_name}|
+                            <a href="__MODULE__/User/logout">退出</a>
+                        <else />
+                            <a href="__MODULE__/User/login">登录</a>|
+                            <a href="__MODULE__/User/register">注册</a>
+                        </if>                      
+                    </font>
+                </div>
+                <div style="float: right;">
+                    <?php echo date('Y-m-d H:i:s') ?>
+                </div>
+            </div>
+            <div id="mainNav" class="clearfix">
+                <a href="__MODULE__/Index/index">首页<span></span></a>
+                <a href="__MODULE__/Project/index">社团项目<span></span></a>
+                <a href="__MODULE__/Member/index">社团成员<span></span></a>
+                <a href="__MODULE__/Resoult/index?id=5">社团资源<span></span></a>
+                <a href="__MODULE__/Picture/index">社团相册<span></span></a>
+                <a href="__MODULE__/Note/index?id=6">社团留言<span></span></a>
+                <a href="__MODULE__/Personal/index">个人中心<span></span></a>
+            </div>
+        </div>
+        <div class="header_bg"></div>
+        <link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}banner.css" />
+        <script type="text/javascript" src="{$Think.const.JS_URL}jquery.min.js"></script>
+        <script type="text/javascript" src="{$Think.const.JS_URL}banner.js"></script>
+        <div class="indexmainimg">
+            <div id="focus">
+                <ul>
+                    <li><a href=""><img src="{$Think.const.IMG_URL}roll_01.jpg"></a></li>
+                    <li><a href=""><img src="{$Think.const.IMG_URL}roll_02.jpg"></a></li>
+                    <li><a href=""><img src="{$Think.const.IMG_URL}roll_03.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+<!--加载页面主题内容-->
+{__CONTENT__}
+
+<!--页脚-->
+<div class="footer">
+<p>版权所有 &copy; - 南工社团 - </p>
+</div>
+</body>
+</html>

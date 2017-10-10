@@ -1,0 +1,46 @@
+<div class="main">
+	<div class="left">
+		<div class="menu1">
+			<h2><img src="{$Think.const.IMG_URL}channel_1.gif" /></h2>
+			<ul>
+				<li><a href="__CONTROLLER__/index" title="项目列表" id="pro1">项目列表</a></li>
+				<li><a href="__CONTROLLER__/add" title="申报项目" id="pro2">申报项目</a></li>
+				<li><a href="__CONTROLLER__/lst" title="我的项目" id="pro3">我的项目</a></li>
+                <li><a href="__CONTROLLER__/member" title="项目组成员" id="pro4">项目组成员</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团项目</a></div>
+		<div class="positioninfo">社团项目列表</div>
+		<div class="mainarea">
+			<table width="100%" border="0" cellspacing="1" cellpadding="3">
+				<tbody>
+                	<tr style="font-weight: bold;">
+                        <td>编号</td><td>项目编号</td><td>项目名称</td><td>项目负责人</td>
+                        <td>开始时间</td><td>结束时间</td><td>项目进度</td>
+                        <td>操作</td>
+                    </tr>
+                    <volist name="info" id="v">
+                    <tr id="project">
+                        <td>{$i}</td>
+                        <td>{$v['pro_id']}</td>
+                        <td>{$v['pro_name']}</td>
+                        <td>{$v['pro_people']}</td>
+                        <td>{$v['pro_starttime']}</td>
+                        <td>{$v['pro_endtime']}</td>
+                        <td>{$v['pro_plan']}%</td>
+                        <td><a href="__CONTROLLER__/more/id/{$v['pro_id']}">查看详情</td>
+                    </tr>
+                    </volist>
+                    <tr>
+                        <td colspan="20" style="text-align: right;">
+                            {$page}
+                        </td>
+                    </tr>
+                </tbody>
+			</table>
+		<div class="backtop"><a href="#"><img src="{$Think.const.IMG_URL}top.gif" alt="回顶部" /></a></div>
+		</div>
+	</div>
+</div>

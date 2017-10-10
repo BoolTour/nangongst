@@ -1,0 +1,39 @@
+@charset="utf-8";
+
+/*实现图片之间无缝隙*/
+img{                 
+	outline-width:0px;
+	vertical-align:top;
+	}
+
+  
+  /*社团相册*/
+#body{width: 1002px;margin:0 auto; background:#FFF;}
+
+/*留言页面*/
+#note_body{width:1002px;height: 700px;height:auto;margin: 0 auto;clear: both;background:#fff}
+.Li_pic{width: 998px;height: 80px;margin: 0 auto;border: 3px dashed #acd8f5;}
+.Li_pic img{float: left;}
+#message_box{width: 1002px;min-height: 380px;height: auto; margin: 0 auto;border: 1px solid #ccc;border-top: none;position: relative;}
+#message_box #pp1{text-indent: 2em;height: 25px; padding-top: 10px;border-bottom: 1px solid #ccc;background: #edf6fb}
+#message_box ul li span{ color:#999;}
+#message_box .content{width: 750px;height: auto; margin: 0 auto;margin-top: 5px;}
+#message_box .content span{display: block;height: 25px;width: 750px;background: #ccc;}
+.content span img{float: left;padding-top: 5px;padding-right: 5px;}
+.content span p{line-height: 25px;float: left;padding-right: 5px;}
+.content .p2{text-indent: 2em;}
+
+#mybtn{width: 1002px;min-height: 30px; height: auto; position:relative;margin:0 auto; border: 1px solid #ccc;}
+#btn1{position: absolute;top:4px;right: 5px;}
+#input_word input{margin-left: 80px;}
+#input_word{display: none;}
+
+/*留言页面结束*/
+
+/*中下部分*/
+.mid_bottom{width: 1000px;margin: 0 auto;background: #ffffff;float: left;}
+.mid_bottom .scroll_div{width: 1000px;height: 210px;margin:0 auto; overflow: hidden; white-space: nowrap;}
+.mid_bottom .scroll_div img{height: 208px;margin:auto 0px;}
+#scroll_begin, #scroll_end, #scroll_begin ul, #scroll_end ul, #scroll_begin ul li, #scroll_end ul li{display:inline;}
+/*设置ul和li横排*/
+

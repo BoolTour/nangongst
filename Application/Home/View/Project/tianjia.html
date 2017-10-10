@@ -1,0 +1,69 @@
+<div class="main">
+	<div class="left">
+		<div class="menu1">
+			<h2><img src="{$Think.const.IMG_URL}channel_1.gif" /></h2>
+			<ul>
+				<li><a href="__CONTROLLER__/index" title="项目列表" id="pro1">项目列表</a></li>
+				<li><a href="__CONTROLLER__/add" title="申报项目" id="pro2">申报项目</a></li>
+				<li><a href="__CONTROLLER__/lst" title="我的项目" id="pro3">我的项目</a></li>
+                <li><a href="__CONTROLLER__/member" title="项目组成员" id="pro4">项目组成员</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">社团项目</a></div>
+		<div class="positioninfo">我的项目</div>
+		<div class="mainarea">
+			<form action="__SELF__" method="post" name="form1">
+                <table width="100%" border="0" cellspacing="1" cellpadding="3" class="message_add" >
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">项目编号：</td>
+                        <td colspan="3" align="left">
+                            <input type="text" name="pro_id" id="pro_id" />&nbsp;<font class="red">*</font>
+                        </td>
+                    </tr> 
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">组成员名字：</td>
+                        <td colspan="3" align="left">
+                            <input type="text" name="name" id="name" />&nbsp;<font class="red">*</font>
+                        </td>
+                    </tr> 
+                    <tr bgcolor="#FFFFFF">
+                        <td align="right">组成员邮箱：</td>
+                        <td colspan="3" align="left">
+                            <input type="email" name="email" id="email" />&nbsp;<font class="red">*</font>
+                        </td>
+                    </tr> 
+                    <tr align="center" bgcolor="#FFFFFF">
+                        <td height="30" colspan="2">
+                          <input type="submit" value="   提   交   " />&nbsp;&nbsp;
+                          <input type="reset" value="   重   置   " />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{$Think.const.JS_URL}jquery.min.js"></script>
+<script type="text/javascript">
+    $("form[name=form1]").submit(function(){
+        //使用ajax来提交
+        $.ajax({
+            type:"POST",
+            url:"__SELF__",
+            data:$(this).serialize(),  //收集表单数据
+            dataType:"json",      //标记服务器返回的是json数据
+            success:function(data){
+                //data是从服务器返回的数据
+                if(data.status==1){
+                    alert(data.info);
+                    location.href=data.url;
+                }else{
+                    alert(data.info);
+                }
+            }
+        });
+        return false;
+    })
+</script>

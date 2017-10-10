@@ -1,0 +1,31 @@
+<div class="main">
+	<div class="left">
+		<div class="leftpic">
+			<h3><img src="{$Think.const.IMG_URL}channel_4.gif" width="238" height="32" /></h3>
+		</div>
+	</div>
+	<div class="right">
+		<div class="position">您的位置是：<a href="#">首页</a>=><a href="#">个人中心</a></div>
+		<div class="positioninfo">个人中心</div>
+		<div class="mainarea">
+			<table width="80%" border="1" bgcolor="#ccc" align="center">
+				<tbody>
+                	<tr style="font-weight: bold;">
+                        <td width="20%">用户名</td><td width="20%">密码</td>
+                        <td width="20%">邮箱</td><td width="20%">学号</td><td width="20%">操作</td>
+                    </tr>
+                    <volist name="person" id="v">
+                    <tr>
+                        <td>{$v['username']}</td>
+                        <td>XXXXXXX</td>
+                        <td>{$v['email']}</td>
+                        <td>{$v['sno']}</td>
+                        <td><a href="__CONTROLLER__/xiugai/id/{$v['id']}">修改</a></td>                    
+      				</tr>
+                    </volist>          
+                </tbody>
+			</table>
+		</div>
+	</div>
+
+</div>
